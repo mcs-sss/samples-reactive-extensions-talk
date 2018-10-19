@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveExtensionsConsoleApp", "ReactiveExtensionsConsoleApp\ReactiveExtensionsConsoleApp.csproj", "{F35E67EE-0E8D-433B-B2EB-8526C95E5122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveExtensionsWinFormsApp", "ReactiveExtensionsWinFormsApp\ReactiveExtensionsWinFormsApp.csproj", "{65727DF4-AEA8-461E-833E-55AC94E62FBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F35E67EE-0E8D-433B-B2EB-8526C95E5122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35E67EE-0E8D-433B-B2EB-8526C95E5122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35E67EE-0E8D-433B-B2EB-8526C95E5122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35E67EE-0E8D-433B-B2EB-8526C95E5122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65727DF4-AEA8-461E-833E-55AC94E62FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65727DF4-AEA8-461E-833E-55AC94E62FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65727DF4-AEA8-461E-833E-55AC94E62FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65727DF4-AEA8-461E-833E-55AC94E62FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E52376C-14AA-41EC-9232-938CE26D4FD8}
+	EndGlobalSection
+EndGlobal
