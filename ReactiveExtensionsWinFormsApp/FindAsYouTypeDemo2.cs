@@ -49,7 +49,7 @@ namespace ReactiveExtensionsWinFormsApp
 				.Subscribe(resultSet => listBoxResults.Items.Clear());
 
 			resultSetsMultiple
-				.Select(resultSet => resultSet.Buffer(TimeSpan.FromSeconds(1), 10))
+				.Select(resultSet => resultSet.Buffer(TimeSpan.FromSeconds(1), 10)) //collect results so we can send them to the UI in batches (scalability tweak)
 				.Switch()
 				.ObserveOn(listBoxResults)
 				.Subscribe(results =>

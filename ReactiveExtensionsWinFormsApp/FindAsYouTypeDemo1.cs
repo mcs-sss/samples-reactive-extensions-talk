@@ -37,6 +37,7 @@ namespace ReactiveExtensionsWinFormsApp
 					handler => textBoxSearchQuery.TextChanged -= handler
 				)
 				.Select(eventInfo => textBoxSearchQuery.Text)
+				.DistinctUntilChanged() //don't bother searching again if no change
 				.Throttle(TimeSpan.FromSeconds(.5));
 		}
 
@@ -51,6 +52,12 @@ namespace ReactiveExtensionsWinFormsApp
 
 				foreach (string result in results)
 				{
+					//break out of the loop if canceled
+					if (cancel.IsCancellationRequested)
+					{
+						break;
+					}
+
 					await Task.Delay(TimeSpan.FromSeconds(.25), cancel);
 					observer.OnNext(result);
 				}
@@ -72,6 +79,7 @@ namespace ReactiveExtensionsWinFormsApp
 
 		protected virtual void Subscribe(IObservable<IObservable<string>> resultSets)
 		{
+			//this is flawed because the previous results may still come in and interfere with the new results
 			resultSets
 				.ObserveOn(listBoxResults)
 				.Subscribe(newResultSet =>
