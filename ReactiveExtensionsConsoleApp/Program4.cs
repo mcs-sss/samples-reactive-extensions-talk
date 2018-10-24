@@ -10,11 +10,25 @@ namespace ReactiveExtensionsConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			Task t = new TemperatureSensor().IObservableExampleRollingMaximum();
+			Task t = MainAsync();
 
 			Console.WriteLine("Press enter to exit");
 			Console.ReadLine();
-			
+
+		}
+
+		private static async Task MainAsync()
+		{
+			TemperatureSensor temperatureSensor = new TemperatureSensor();
+
+			Console.WriteLine(nameof(temperatureSensor.IEnumerableExample));
+			temperatureSensor.IEnumerableExample();
+
+			Console.WriteLine(nameof(temperatureSensor.IObservableExample));
+			await temperatureSensor.IObservableExample();
+
+			Console.WriteLine(nameof(temperatureSensor.IObservableExampleRollingMaximum));
+			await temperatureSensor.IObservableExampleRollingMaximum();
 		}
 	}
 }
